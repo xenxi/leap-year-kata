@@ -5,6 +5,17 @@ namespace LeapYearKata.Tests
 {
     public class YearShould
     {
+        [TestCase ("2000")]
+        [TestCase ("2008")]
+        public void be_leap(int yearNumber)
+        {
+            var year = new Year(yearNumber);
+
+            var isLeap = year.IsLeap();
+
+            isLeap.Should().BeTrue();
+        }
+
         [Test]
         public void be_leap_for_2000()
         {
