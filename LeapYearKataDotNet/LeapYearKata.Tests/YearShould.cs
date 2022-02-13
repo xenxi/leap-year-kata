@@ -24,5 +24,15 @@ namespace LeapYearKata.Tests
 
             isLeap.Should().BeFalse();
         }
+
+        [Test]
+        public void not_be_leap_for_1800()
+        {
+            var year = new Year(1800);
+
+            var isLeap = year.IsLeap();
+
+            isLeap.Should().BeFalse();
+        }
     }
 }
