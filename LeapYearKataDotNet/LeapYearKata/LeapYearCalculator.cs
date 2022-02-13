@@ -8,7 +8,9 @@
 
         public bool Isleap(int yearNumber)
         {
-            throw new NotImplementedException();
+            var year = new Year(yearNumber);
+
+            return year.IsLeap();
         }
     }
 }
