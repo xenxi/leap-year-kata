@@ -14,8 +14,10 @@
             if (IsDivisibleBy(400))
                 return true;
 
-            return IsDivisibleBy(4) && !IsDivisibleBy(100);
+            return IsDivisibleBy(4) && IsNotDivisibleBy(100);
         }
+
+        private bool IsNotDivisibleBy(int number) => !IsDivisibleBy(number);
 
         private bool IsDivisibleBy(int number) => value % number == 0;
     }
