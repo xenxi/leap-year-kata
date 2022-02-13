@@ -5,8 +5,8 @@ namespace LeapYearKata.Tests
 {
     public class YearShould
     {
-        [TestCase ("2000")]
-        [TestCase ("2008")]
+        [TestCase("2000")]
+        [TestCase("2008")]
         public void be_leap(int yearNumber)
         {
             var year = new Year(yearNumber);
@@ -15,6 +15,7 @@ namespace LeapYearKata.Tests
 
             isLeap.Should().BeTrue();
         }
+
         [TestCase("1700")]
         [TestCase("1800")]
         public void not_be_leap(int yearNumber)
@@ -25,25 +26,5 @@ namespace LeapYearKata.Tests
 
             isLeap.Should().BeFalse();
         }
-        [Test]
-        public void not_be_leap_for_1700()
-        {
-            var year = new Year(1700);
-
-            var isLeap = year.IsLeap();
-
-            isLeap.Should().BeFalse();
-        }
-
-        [Test]
-        public void not_be_leap_for_1800()
-        {
-            var year = new Year(1800);
-
-            var isLeap = year.IsLeap();
-
-            isLeap.Should().BeFalse();
-        }
-
     }
 }
