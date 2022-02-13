@@ -11,10 +11,12 @@
 
         public bool IsLeap()
         {
-            if (value % 4 == 0 && value % 100 != 0)
+            if (IsDivisibleBy(4) && !IsDivisibleBy(100))
                 return true;
 
-            return value % 400 == 0;
+            return IsDivisibleBy(400);
         }
+
+        private bool IsDivisibleBy(int number) => value % number == 0;
     }
 }
