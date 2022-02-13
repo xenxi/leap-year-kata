@@ -17,16 +17,6 @@ namespace LeapYearKata.Tests
         }
 
         [Test]
-        public void be_leap_for_2000()
-        {
-            var year = new Year(2000);
-
-            var isLeap = year.IsLeap();
-
-            isLeap.Should().BeTrue();
-        }
-
-        [Test]
         public void not_be_leap_for_1700()
         {
             var year = new Year(1700);
@@ -46,14 +36,5 @@ namespace LeapYearKata.Tests
             isLeap.Should().BeFalse();
         }
 
-        [Test]
-        public void be_leap_for_2008()
-        {
-            var year = new Year(2008);
-
-            var isLeap = year.IsLeap();
-
-            isLeap.Should().BeTrue();
-        }
     }
 }
