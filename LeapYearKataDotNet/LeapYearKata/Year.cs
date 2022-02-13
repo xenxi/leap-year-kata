@@ -2,11 +2,11 @@
 {
     public record Year
     {
-        private int value { get; }
+        private readonly int _value;
 
         public Year(int yearNumber)
         {
-            value = yearNumber;
+            _value = yearNumber;
         }
 
         public bool IsLeap()
@@ -19,6 +19,6 @@
 
         private bool IsNotDivisibleBy(int number) => !IsDivisibleBy(number);
 
-        private bool IsDivisibleBy(int number) => value % number == 0;
+        private bool IsDivisibleBy(int number) => _value % number == 0;
     }
 }
