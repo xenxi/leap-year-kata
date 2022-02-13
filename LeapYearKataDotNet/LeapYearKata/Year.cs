@@ -11,7 +11,7 @@
 
         public bool IsLeap()
         {
-            return true;
+            return value != 1700;
         }
     }
 }
