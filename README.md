@@ -1,4 +1,5 @@
 # Leap Year Kata 🎊
+[![Build](https://github.com/xenxi/leap-year-kata/actions/workflows/build.yml/badge.svg)](https://github.com/xenxi/leap-year-kata/actions/workflows/build.yml)
 
 ## User Story:
 
