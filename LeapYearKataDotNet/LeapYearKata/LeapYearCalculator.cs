@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LeapYearKata.Tests
+﻿namespace LeapYearKata
 {
     public class LeapYearCalculator
     {
