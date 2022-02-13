@@ -16,5 +16,17 @@ namespace LeapYearKata.Tests
 
             isLeap.Should().BeTrue();
         }
+
+        [TestCase(1700)]
+        [TestCase(1800)]
+        [TestCase(1900)]
+        public void not_be_leap_if_is_divisible_by_100_and_not_by_400(int yearNumber)
+        {
+            var calculator = new LeapYearCalculator();
+
+            var isLeap = calculator.Isleap(yearNumber);
+
+            isLeap.Should().BeFalse();
+        }
     }
 }
