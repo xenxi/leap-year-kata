@@ -38,6 +38,17 @@ namespace LeapYearKata.Tests
 
             isLeap.Should().BeFalse();
         }
+
+        [TestCase(2017)]
+        [TestCase(2018)]
+        [TestCase(2019)]
+        public void not_be_leap_if_is_not_divisible_by_4(int yearNumber)
+        {
+            var isLeap = calculator.Isleap(yearNumber);
+
+            isLeap.Should().BeFalse();
+        }
+
         [SetUp]
         public void SetUp()
         {
