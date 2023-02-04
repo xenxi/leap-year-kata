@@ -6,5 +6,11 @@ import { LeapYearCalculator } from "../leap-year-calculator";
 //todo: Todos los años que no son divisibles por 4 NO son bisiestos (por ejemplo, 2017, 2018, 2019).
 
 describe("LeapYearCalculator should", () => {
+  test("identify a year as a leap year if it is divisible by 400", () => {
+    const yearMultipleOf400 = 2000;
 
+    const isLeapYear = LeapYearCalculator.isLeap(yearMultipleOf400);
+
+    expect(isLeapYear).toBeTruthy();
+  });
 });
