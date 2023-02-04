@@ -14,7 +14,7 @@ describe("LeapYearCalculator should", () => {
     expect(isLeapYear).toBeTruthy();
   });
   test.each([2017, 2018, 2019])(
-    "identify %s as a non-leap year if git it is not divisible by 4",
+    "identify %s as a non-leap year if it is not divisible by 4",
     (yearNoMultipleOf4: number) => {
       const isLeapYear = LeapYearCalculator.isLeap(yearNoMultipleOf4);
 
