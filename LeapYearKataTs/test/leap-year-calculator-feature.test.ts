@@ -30,4 +30,13 @@ describe("LeapYearCalculator should", () => {
       expect(isLeapYear).toBeFalsy();
     }
   );
+
+  test.each([2008, 2012, 2016])(
+    "identify %s as a leap year if it is divisible by 4 but not by 100",
+    (yearNoMultipleOf4: number) => {
+      const isLeapYear = LeapYearCalculator.isLeap(yearNoMultipleOf4);
+  
+      expect(isLeapYear).toBeTruthy();
+    }
+  );
 });
