@@ -1,15 +1,18 @@
 export class LeapYearCalculator {
-  public static isLeap(year: number): boolean {
-    if (
-      this.isDivisible({ year: year, num: 100 }) &&
-      !this.isDivisible({ year: year, num: 400 })
-    )
-      return false;
-    if (!this.isDivisible({ year: year, num: 4 })) return false;
+  public static isLeap(yearNumber: number): boolean {
+    const year = new Year(yearNumber);
+    return year.isLeap();
+  }
+}
+
+class Year {
+  constructor(private year: number) {}
+
+  public isLeap(): boolean {
+    if (this.isDivisibleBy(100) && !this.isDivisibleBy(400)) return false;
+    if (!this.isDivisibleBy(4)) return false;
     return true;
   }
-  private static isDivisible = (params: {
-    year: number;
-    num: number;
-  }): boolean => params.year % params.num == 0;
+
+  private isDivisibleBy = (num: number): boolean => this.year % num == 0;
 }
