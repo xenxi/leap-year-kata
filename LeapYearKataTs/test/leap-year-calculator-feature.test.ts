@@ -21,4 +21,13 @@ describe("LeapYearCalculator should", () => {
       expect(isLeapYear).toBeFalsy();
     }
   );
+
+  test.each([1700, 1800, 1900, 2100])(
+    "identify %s as a non-leap year if it is divisible by 100 but not by 400",
+    (yearNoMultipleOf4: number) => {
+      const isLeapYear = LeapYearCalculator.isLeap(yearNoMultipleOf4);
+
+      expect(isLeapYear).toBeFalsy();
+    }
+  );
 });
